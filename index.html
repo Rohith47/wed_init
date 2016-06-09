@@ -10,74 +10,94 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/animate.css">        
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
+        <link rel="stylesheet" href="css/bootstrap.css">        
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/ilove.css">
+        <link rel="stylesheet" href="css/anicollection.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
         <link rel="stylesheet" href="css/main.css">
+        <style>
+        .slider {
+          width: 50%;
+          margin: 100px auto;
+        }
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        .slick-slide {
+          margin: 0px 20px;
+        }
+
+        #map{
+          width: 100%;
+          height: 400px;
+          background-color: #CCC;
+        }
+        </style>
+
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#navbar-main" data-offset="70">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div class="container carousel-wrapper">
+    <div class="container carousel-container">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
       </ol>
 
       <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-
+          <div class="messages">
+            <h1 class="" data-anijs="if: load, on: window, do: slideInDown animated">Rohith <span class="heart pulsing fa fa-heart"></span> Shobha</h1>
+            <div id="time">
+              
+            </div>
+            <h4 class="" data-anijs="if: load, on: window, do: fadeIn animated addDelayFunction">In love and counting</h4>
+            <div class="btn-special discover-btn" data-anijs="if: load, on: window, do: slideInUp animated addDelayFunction">
+                <a href="#about"><span>Discover More</span></a>
+            </div>          
+          </div>
           <div class="item active">
-            <img src="img/shobha_background2.jpg" alt="Chania" width="1400" height="200">
+            <div class="fill" style="background-image:url('http://placehold.it/1280x835')"></div>
             <div class="carousel-caption">
-              <h3>Chania</h3>
-              <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+             
             </div>
           </div>
 
           <div class="item">
-            <img src="img/shobha_background.jpg" alt="Chania" width="1400" height="200">
+            <div class="fill" style="background-image:url('http://placehold.it/1280x835')"></div>
             <div class="carousel-caption">
-              <h3>Chania</h3>
-              <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+             
             </div>
           </div>
         
           <div class="item">
-            <img src="img/Rohith.jpg" alt="Flower" width="1400" height="200">
+            <div class="fill" style="background-image:url('http://placehold.it/1280x835')"></div>
             <div class="carousel-caption">
-              <h3>Flowers</h3>
-              <p>Beatiful flowers in Kolymbari, Crete.</p>
+              
             </div>
           </div>
 
           <div class="item">
-            <img src="img/shobha.jpg" alt="Flower" width="1400" height="300">
+            <div class="fill" style="background-image:url('http://placehold.it/1280x835')"></div>
             <div class="carousel-caption">
-              <h3>Flowers</h3>
-              <p>Beatiful flowers in Kolymbari, Crete.</p>
+              
             </div>
           </div>
     
         </div>
+        <div class="overlay2"></div>
       </div>
     </div>
-    <nav id="navbar-main" class="navbar" role="navigation">
+    <nav id="navbar-main" class="navbar navbar-default" data-spy="affix" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -88,12 +108,12 @@
           </button>
           <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Heart Image"/></a>
         </div>
-        <div id="navbar" class="navbar-collapse navbar-right collapse">
+        <div id="navbar" class="navbar-collapse transparent navbar-right collapse">
           <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Rohith & Shobha</a></li>
-              <li><a href="#">Our Family</a></li>
-              <li><a href="#">Big Moments</a></li>
-              <li><a href="#">Contacts</a></li>
+              <li><a href="#about">Rohith & Shobha</a></li>
+              <li><a href="#family">Our Family</a></li>
+              <li><a href="#favourites">Favourites</a></li>
+              <li><a href="#day">Big Moment</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -112,13 +132,23 @@
           <div class="col-md-12">
             <div class="col-md-6">
               <div class="man-wrapper pull-right">
-                <div class="profile animated bounceIn"> </div>
+                <div class="profile" data-anijs="if: scroll, on: window, do: flipInX animated, before: $scrollReveal repeat" >
+                  <div class="ch-info">
+                      <h3>I'm Rohith</h3>
+                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="and"> & </div>
             <div class="col-md-6">
               <div class="woman-wrapper pull-left">
-                <div class="profile-bride animated bounceIn"> </div>
+                <div class="profile-bride" data-anijs="if: scroll, on: window, do: flipInX animated, before: $scrollReveal repeat">
+                  <div class="ch-info">
+                      <h3>I'm Shobha</h3>
+                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -128,36 +158,34 @@
         <div class="row">
           <div class="col-md-12">
             <div class="heading">
-              <h2> ಪ್ರೇಮ ನಿವೇದನೆ </h2>
-              <p>Love Moments are special and it deserve to be recorded and to be always remembered! our loveline is just summerize some of our important and happy moments.</p>
+              <h2>Lorem Ipsum heading</h2>
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
             <ul class="timeline">
               <li>
-                <div class="timeline-badge wow fadeInUp animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"><i class="icon icolove-lips"></i></div> 
-                <div class="timeline-panel wow fadeInLeft animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;"> 
+                <div class="timeline-badge" data-anijs="if: scroll, on: window, do: fadeIn animated, before: $scrollReveal repeat"><i class="icon icolove-lips"></i></div> 
+                <div class="timeline-panel" data-anijs="if: scroll, on: window, do: fadeInLeft animated, before: $scrollReveal repeat"> 
                     <div class="timeline-heading"> 
-                        <h4 class="timeline-title">Our First Meet</h4>
-                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 23 OCT 2015</small></p> 
+                        <h4 class="timeline-title">Lorem ipsum</h4>
+                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Date Date </small></p> 
                     </div> 
                     <div class="timeline-body"> 
                         <p>
-                            It wasn't that orthodox like in normal good old indian movies, but it was like a sudden plan to reach her home.
-                            I can remember the moment, when we talked to each other and SHO was so silent and angry.
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                         </p>
                     </div> 
                 </div>
               </li>
               <li class="timeline-inverted negative100"> 
-                  <div class="timeline-badge time wow fadeInUp animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;"><i class="icon icolove-ring"></i></div> 
-                  <div class="timeline-panel wow fadeInRight animated" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInRight;"> 
+                  <div class="timeline-badge time" data-anijs="if: scroll, on: window, do: fadeIn animated, before: $scrollReveal repeat"><i class="icon icolove-ring"></i></div> 
+                  <div class="timeline-panel" data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat"> 
                       <div class="timeline-heading"> 
-                          <h4 class="timeline-title">First Valentine Day</h4>
-                          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 20 Dec 2010 - By Eve</small></p> 
+                          <h4 class="timeline-title">Lorem Ipsum</h4>
+                          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Date Date Date</small></p> 
                       </div> 
                       <div class="timeline-body"> 
                           <p>
-                              Receiving the Amazon parcel on 12th FEB (2 day's before valentine), forst thing I told the delivery boy, I dint order it!! I don't have the money to pay :-p :-p
-                              It was a wondeful gift from him a Bracelet.
+                              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                           </p>                                      
                       </div> 
                   </div> 
@@ -165,31 +193,181 @@
             </ul>
           </div>
         </div>
+        <div class="seperator"> </div>
       </div>
     </section>
     <section class="family" id="family">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2>Family Members</h2>
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            </div>
+            <div class="col-md-4 mans-family">
+              <h3> Rohith's Family </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo
+              </p>
+              <div class="family-slider">
+                <div class="profile man-family-member">
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <h4>Shashidhar</h4>
+                  <h5>Father</h5>
+                </div>
+                <div class="profile man-family-member">
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <h4>Shashidhar</h4>
+                  <h5>Father</h5>
+                </div>
+                <div class="profile man-family-member">
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <h4>Shashidhar</h4>
+                  <h5>Father</h5>
+                </div>
+                <div class="profile man-family-member">
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <h4>Shashidhar</h4>
+                  <h5>Father</h5>
+                </div>
 
+              </div>
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4 mans-family">
+              <h3> Shobha's Family </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo
+              </p>
+              <div class="family-slider">
+                <div class="profile man-family-member">
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <h4>Shashidhar</h4>
+                  <h5>Father</h5>
+                </div>
+                <div class="profile man-family-member">
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <h4>Shashidhar</h4>
+                  <h5>Father</h5>
+                </div>
+                <div class="profile man-family-member">
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <h4>Shashidhar</h4>
+                  <h5>Father</h5>
+                </div>
+                <div class="profile man-family-member">
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <h4>Shashidhar</h4>
+                  <h5>Father</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="seperator"> </div>
+      </div>
+    </section>
+    <section class="favourites" id="favourites">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2> Our Favorites</h2>
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            </div>
+            <div class="col-md-12 favlist">       
+              <img src="img/both1.jpg" alt="couple">
+              <div class="favlist-title">
+                  <div class="favlist-name">Rohith</div>
+                  <div class="favlist-name">Shobha</div>
+              </div>
+              <ul class="timeline">
+                <li>                    
+                    <div class="timeline-badge" data-anijs="if: scroll, on: window, do: fadeIn animated, before: $scrollReveal repeat"><i class="icon icolove-meal"></i></div> 
+                    <div class="timeline-left" data-anijs="if: scroll, on: window, do: fadeInLeft animated, before: $scrollReveal repeat">
+                        <h4 class="timeline-title">Lorem Ipsum</h4>
+                        <p>Sed ut perspiciatis unde omn iste natus error sit voluptatem accusantium </p>
+                    </div>
+                    <div class="timeline-right" data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat">
+                        <h4 class="timeline-title">Lorem Ipsum</h4>
+                        <p>Sed ut perspiciatis unde omn iste natus error sit voluptatem accusantium </p>
+                    </div>                    
+                </li>
+                        
+                <li>                    
+                    <div class="timeline-badge" data-anijs="if: scroll, on: window, do: fadeIn animated, before: $scrollReveal repeat"><i class="icon icolove-film"></i></div> 
+                    <div class="timeline-left" data-anijs="if: scroll, on: window, do: fadeInLeft animated, before: $scrollReveal repeat">
+                        <h4 class="timeline-title">Lorem Ipsum</h4>
+                        <p>Sed ut perspiciatis unde omn iste natus error sit voluptatem accusantium </p>
+                    </div>
+                    <div class="timeline-right" data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat">
+                        <h4 class="timeline-title">Lorem Ipsum</h4>
+                        <p>Sed ut perspiciatis unde omn iste natus error sit voluptatem accusantium </p>
+                    </div>                    
+                </li>
+                        
+                       
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="seperator"> </div>
+      </div>
+    </section>
+    <section class="day" id="day">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2> The Day</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum.</p>
+            </div>
+            <div class="col-md-6"> 
+              <div class="wedding_venue">
+                <img src="img/MSP_0093.jpg" alt="wedding_venue">
+                <h4>Our Wedding Venu</h4>
+                <p>Check the map below to get location direction</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="day-details" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal repeat">
+                  <h4>Date &amp; Location</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum.</p>
+                <h4><strong>11 July. 2016</strong></h4>
+              </div>
+              <div class="day-details" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal repeat">
+                  <h4>Wedding Program</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum.</p>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="footer" class="foorter">
-
+      
     </section>
 
     <!-- /container -->        
         <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+
+        <script src="js/vendor/modernizer.custom.js"></script>
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt5VwG19-JzmeqEmFlTF8_rBdaX8CP0Bo"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+        <script src="js/vendor/countup.js"></script>
+        <script src="js/vendor/wow.min.js"></script>
+        <script type="text/javascript" src="js/anijs-min.js"></script>
+        <script type="text/javascript" src="js/anijs-helper-scrollreveal-min.js"></script>
+        <script type="text/javascript" src="js/vendor/slick.min.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!--<script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>-->
+        
+        
     </body>
 </html>
