@@ -53,12 +53,12 @@ $('.family-slider').slick({
 /*--------------------------- Maps Loading ----------------------------*/
   google.maps.event.addDomListener(window, 'load', init);
     function init() { 
-      var mainPosition = new google.maps.LatLng(12.9493409, 75.3791096);
+      var mainPosition = new google.maps.LatLng(12.9887454, 75.2375256);
       var mapOptions = {
         zoom: 10,
         scrollwheel: false,
-        disableDefaultUI: true,
-        center: mainPosition // dharmasthala
+        zoomControl: true,
+        center: mainPosition // Belthangady
         //styles: [{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off","hue": "#FFFFFF"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
       };
       var mapElement = document.getElementById('map');
@@ -67,15 +67,15 @@ $('.family-slider').slick({
         
       var contentString =
         '<div class="map-content">'+
-        '<h3>Our City</h3>'+
-        '<p>Melbourne is the capital and most populous city in the state of Victoria, and the second most populous city in Australia.The name "Melbourne" refers to an urban agglomeration area spanning 9,900 km2 that comprises the greater metropolis – as well as being a common name for its metropolitan hub, the Melbourne City Centre.</p>'+
+        '<h3>Kinyamma Yane Gunavathi Amma Sabha Bhavana, Belthangady, Karnataka</h3>'+
+
         '</div>'
       
       var image = 'images/marker.png';
-      var myLatLng = new google.maps.LatLng(12.9895379, 75.257669);
+      var myLatLng = new google.maps.LatLng(12.989487, 75.2577987);
       var mapMarker = new google.maps.Marker({
         position: myLatLng,
-        map: map,        title:  'location'
+        map: map,        title:  'Kellagutthu Kinyamma Yane Gunavathi Amma Sabha Bhavana'
       });
       var infowindow = new google.maps.InfoWindow({
         content: contentString
