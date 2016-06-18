@@ -14,32 +14,23 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>        
+        <link rel="stylesheet" href="css/preloader/normalize.css">
         <link rel="stylesheet" href="css/font-awesome.css">
         <link rel="stylesheet" href="css/ilove.css">
         <link rel="stylesheet" href="css/anicollection.css">
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/slick-theme.css">
+        <link rel="stylesheet" href="css/preloader/main.css">
+        <link rel="stylesheet" href="css/scrolling-nav.css">
         <link rel="stylesheet" href="css/main.css">
-        <style>
-        .slider {
-          width: 50%;
-          margin: 100px auto;
-        }
-
-        .slick-slide {
-          margin: 0px 20px;
-        }
-
-        #map{
-          width: 100%;
-          height: 400px;
-          background-color: #CCC;
-        }
-        </style>
-
     </head>
-    <body data-spy="scroll" data-target="#navbar-main" data-offset="70">
+    <body id="page-top" data-spy="scroll" data-target="#navbar-main" data-offset="50">
+      <div id="loader-wrapper">
+          <div id="loader"> LOADING</div>       
+          <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>       
+      </div>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -56,13 +47,13 @@
       <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="messages">
-            <h1 class="" data-anijs="if: load, on: window, do: slideInDown animated">Rohith <span class="heart pulsing fa fa-heart"></span> Shobha</h1>
+            <h1 class="" data-anijs="if: complete, on: $pageloader, do: slideInDown animated">Rohith <span class="heart pulsing fa fa-heart"></span> Shobha</h1>
             <div id="time">
               
             </div>
-            <h4 class="" data-anijs="if: load, on: window, do: fadeIn animated addDelayFunction">In love and counting</h4>
-            <div class="btn-special discover-btn" data-anijs="if: load, on: window, do: slideInUp animated addDelayFunction">
-                <a href="#about"><span>Discover More</span></a>
+            <h4 class="" data-anijs="if: complete, on: $pageloader, do: fadeIn animated addDelayFunction">In love and counting</h4>
+            <div class="btn-special discover-btn" data-anijs="if: complete, on: $pageloader, do: slideInUp animated addDelayFunction">
+                <a href="#about_d" class="page-scroll"><span>Discover More</span></a>
             </div>          
           </div>
           <div class="item active">
@@ -94,26 +85,27 @@
           </div>
     
         </div>
-        <div class="overlay2"></div>
       </div>
     </div>
+    <div id="about_d"> </div> 
     <nav id="navbar-main" class="navbar navbar-default" data-spy="affix" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="img/Drawing.png" alt="Heart Image"/></a>
+          <a class="navbar-brand page-scroll" href="page-top"><img src="img/Drawing.png" alt="Heart Image"/></a>
         </div>
         <div id="navbar" class="navbar-collapse transparent navbar-right collapse">
           <ul class="nav navbar-nav">
-              <li><a href="#about">Rohith & Shobha</a></li>
-              <li><a href="#family">Our Family</a></li>
-              <li><a href="#favourites">Favourites</a></li>
-              <li><a href="#day">Big Moment</a></li>
+              <li class="hidden"><a href="#page-top" class="page-scroll"></a></li>
+              <li class="active"><a href="#about" class="page-scroll">Rohith & Shobha</a></li>
+              <li><a href="#family" class="page-scroll">Our Family</a></li>
+              <li><a href="#favourites" class="page-scroll">Favourites</a></li>
+              <li><a href="#day" class="page-scroll">Big Moment</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -211,22 +203,22 @@
               </p>
               <div class="family-slider">
                 <div class="profile man-family-member">
-                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="animated fadeIn"/> 
                   <h4>Shashidhar</h4>
                   <h5>Father</h5>
                 </div>
                 <div class="profile man-family-member">
-                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="animated fadeIn"/> 
                   <h4>Shashidhar</h4>
                   <h5>Father</h5>
                 </div>
                 <div class="profile man-family-member">
-                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="animated fadeIn"/> 
                   <h4>Shashidhar</h4>
                   <h5>Father</h5>
                 </div>
                 <div class="profile man-family-member">
-                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="animated fadeIn"/> 
                   <h4>Shashidhar</h4>
                   <h5>Father</h5>
                 </div>
@@ -244,22 +236,22 @@
               </p>
               <div class="family-slider">
                 <div class="profile man-family-member">
-                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="animated fadeIn"/> 
                   <h4>Shashidhar</h4>
                   <h5>Father</h5>
                 </div>
                 <div class="profile man-family-member">
-                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="animated fadeIn"/> 
                   <h4>Shashidhar</h4>
                   <h5>Father</h5>
                 </div>
                 <div class="profile man-family-member">
-                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="animated fadeIn"/> 
                   <h4>Shashidhar</h4>
                   <h5>Father</h5>
                 </div>
                 <div class="profile man-family-member">
-                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="wow animated fadeIn"/> 
+                  <img src="img/IMG_2091.jpg" width="300px" height="300px" class="animated fadeIn"/> 
                   <h4>Shashidhar</h4>
                   <h5>Father</h5>
                 </div>
@@ -278,7 +270,7 @@
               <h2> Our Favorites</h2>
               <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
             </div>
-            <div class="col-md-12 favlist">       
+            <div class="favlist">       
               <img src="img/both1.jpg" alt="couple">
               <div class="favlist-title">
                   <div class="favlist-name">Rohith</div>
@@ -325,11 +317,13 @@
               <h2> The Day</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum.</p>
             </div>
-            <div class="col-md-6"> 
-              <div class="wedding_venue">
-                <img src="img/MSP_0093.jpg" alt="wedding_venue">
-                <h4>Our Wedding Venu</h4>
-                <p>Check the map below to get location direction</p>
+            <div class="col-md-6">
+              <div class="venue">
+                <div class="wedding_venue">
+                  <img src="img/venue.jpg" alt="wedding_venue">
+                  <h4>Our Wedding Venu</h4>
+                  <p>Check the map below to get location direction</p>
+                </div>
               </div>
             </div>
             <div class="col-md-6">
@@ -343,7 +337,8 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum.</p>
               </div>
             </div>
-            <div class="clearfix"></div>
+          </div>
+          <div class="col-md-12">
             <div id="map"></div>
           </div>
         </div>
@@ -362,10 +357,11 @@
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt5VwG19-JzmeqEmFlTF8_rBdaX8CP0Bo"></script>
         <script src="js/vendor/bootstrap.js"></script>
         <script src="js/vendor/countup.js"></script>
-        <script src="js/vendor/wow.min.js"></script>
         <script type="text/javascript" src="js/anijs-min.js"></script>
-        <script type="text/javascript" src="js/anijs-helper-scrollreveal-min.js"></script>
+        <script type="text/javascript" src="js/anijs-helper-scrollreveal-min.js"></script> 
         <script type="text/javascript" src="js/vendor/slick.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="js/scrolling-nav.js"></script>
         <script src="js/main.js"></script>
         
         
