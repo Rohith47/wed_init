@@ -45,6 +45,13 @@ window.onload = function(){
     }, 1000);
 
 
+    $('.nav.navbar-nav li>a').click(function(){
+      if($('#navbar').hasClass('in')){
+        $('#navbar').removeClass('in')
+      }
+    })
+
+
 /*var animationHelper = AniJS.getHelper();
 
 animationHelper.addDelayFunction = function(e, animationContext){
@@ -71,9 +78,64 @@ $('.family-slider').slick({
   dots: true,
   arrows:false,
   autoplay: true,
-  autoplaySpeed: 5000
+  autoplaySpeed: 5000,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
 });
 
+$('.moment-slider').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  dots: false,
+  arrows:false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  rows: 2,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+})
+
+
+$('.popup_img').magnificPopup({
+  type: 'image',
+  closeOnContentClick: true,
+  mainClass: 'mfp-zoom-in',
+  midClick: true,
+  callbacks: {
+    beforeOpen: function() {
+      // just a hack that adds mfp-anim class to markup 
+      $('.moment-slider').slick('slickPause');
+    },
+    afterClose: function() {
+      // just a hack that adds mfp-anim class to markup 
+      $('.moment-slider').slick('slickPlay');
+    }
+  }
+});
+
+$(window).on("hashchange", function(){
+   scrollBy(0, -50)
+});
 
   
 
@@ -111,5 +173,8 @@ $('.family-slider').slick({
         infowindow.open(map, mapMarker);
       });   
     }
+
+
+
   })
 

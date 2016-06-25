@@ -24,7 +24,7 @@ body{
 }
 
 #navbar-main{
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 /* =======================CAROUSEL & CONTENT START================================= */
@@ -218,10 +218,14 @@ body{
     background-image: none;
 }
 
+.navbar-brand{
+    padding-top: 0px;
+}
+
 button.navbar-toggle{
     border:0;
     background-color: transparent;
-    margin-top: 22px;
+    /*margin-top: 22px;*/
 }
 
 .navbar-toggle .icon-bar{
@@ -239,8 +243,8 @@ button.navbar-toggle{
     text-transform: uppercase;
     color: #283a44;
     font-size: 14px;
-    height: 73px;
-    line-height: 45px;
+   /* height: 73px;
+    line-height: 45px;*/
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
@@ -305,7 +309,7 @@ button.navbar-toggle{
 }
 
 .man-wrapper .profile{
-    background-image:url('../img/MSP_0162.jpg');
+    background-image:url('../img/profile_man.jpg');
     border-radius: 50%;
     background-size: 300px 300px;
     background-position: 56% -3%;
@@ -320,7 +324,7 @@ button.navbar-toggle{
 }
 
 .profile-bride{
-    background-image:url('../img/MSP_0108.jpg');
+    background-image:url('../img/profile_women.jpg');
     background-size: 300px 300px;
     border-radius: 50%;
     background-position: 63% 10%;
@@ -589,7 +593,7 @@ button.navbar-toggle{
 
 @font-face {
   font-family: 'ilove';
-  src: url('../fonts/ilove.woff');
+  src: url('fonts/ilove.woff');
   
 }
 
@@ -975,11 +979,19 @@ section{
 
 /*========================================================================== */
 
-/* preloader */
-#loader-wrapper{
-
+.moment-slider .col-md-3{
+    padding:0;
+    margin:0;
 }
 
+.moment-slider .slick-slide{
+    margin-left:0;
+    margin-right: 0;
+}
+
+.mfp-bg, .mfp-wrap{
+    z-index: 10000;
+}
 
 
 
