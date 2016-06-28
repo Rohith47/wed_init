@@ -595,10 +595,6 @@ button.navbar-toggle{
     content: "\e015";
 }
 
-.icolove-gift:before {
-    content: "\e015";
-}
-
 [class^="icolove-"]:before, [class*=" icolove-"]:before {
     font-family: "ilove" !important;
     font-style: normal !important;
