@@ -324,7 +324,7 @@ button.navbar-toggle{
 }
 
 .profile-bride{
-    background-image:url('../img/profile_women.jpg');
+    background-image:url('../img/profile_man1.jpg');
     background-size: 300px 300px;
     border-radius: 50%;
     background-position: 63% 10%;
@@ -1007,6 +1007,10 @@ section{
 
 .mfp-bg, .mfp-wrap{
     z-index: 10000;
+}
+
+.popup_img img{
+    height:220px;
 }
 
 
