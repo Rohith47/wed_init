@@ -579,6 +579,26 @@ button.navbar-toggle{
     content: "\e00a";
 }
 
+.icolove-engage:before {
+    content: "\e00b";
+}
+
+.icolove-meet:before {
+    content: "\e014";
+}
+
+.icolove-outing:before {
+    content: "\e018";
+}
+
+.icolove-photo:before {
+    content: "\e015";
+}
+
+.icolove-gift:before {
+    content: "\e015";
+}
+
 [class^="icolove-"]:before, [class*=" icolove-"]:before {
     font-family: "ilove" !important;
     font-style: normal !important;
