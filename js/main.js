@@ -9,10 +9,10 @@
 
             setOffset();
 
-            $('.carousel').carousel({
+            /*$('.carousel').carousel({
                 interval : 4000,
                 pause: false,
-            });
+            });*/
 
             $('.nav.navbar-nav li>a').click(function(){
               if($('#navbar').hasClass('in')){
