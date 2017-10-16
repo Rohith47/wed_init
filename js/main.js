@@ -95,19 +95,19 @@
             };
 
             setInterval(function() {
-              var timespan = countdown(new Date("07/11/2016"), new Date());
+              var timespan = countdown(new Date("11/12/2017"), new Date());
               var div = document.getElementById('time');
               div.innerHTML = "<div><span>Years</span>" + timespan.years + "</div>" + "<div><span>Months</span>" + timespan.months + "</div>" + "<div><span>Days</span>" + timespan.days + "</div>" + "<div><span>Hours</span>" + timespan.hours + "</div>" + "<div><span>Minutes</span>" + timespan.minutes + "</div>" + "<div><span>Seconds</span>" + timespan.seconds + "</div>"
             }, 1000);
 
             google.maps.event.addDomListener(window, 'load', init);
             function init() { 
-              var mainPosition = new google.maps.LatLng(12.9887454, 75.2375256);
+              var mainPosition = new google.maps.LatLng(14.272452, 75.349890);
               var mapOptions = {
                 zoom: 10,
                 scrollwheel: false,
                 zoomControl: true,
-                center: mainPosition // Belthangady
+                center: mainPosition // Shikaripura
                 //styles: [{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off","hue": "#FFFFFF"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
               };
               var mapElement = document.getElementById('map');
@@ -116,15 +116,15 @@
                 
               var contentString =
                 '<div class="map-content">'+
-                '<h3>Kinyamma Yane Gunavathi Amma Sabha Bhavana, Belthangady, Karnataka</h3>'+
+                '<h3>Mangala Bhavana, Shikaripura</h3>'+
 
                 '</div>'
               
               var image = 'images/marker.png';
-              var myLatLng = new google.maps.LatLng(12.989487, 75.2577987);
+              var myLatLng = new google.maps.LatLng(14.272452, 75.349890);
               var mapMarker = new google.maps.Marker({
                 position: myLatLng,
-                map: map,        title:  'Kellagutthu Kinyamma Yane Gunavathi Amma Sabha Bhavana'
+                map: map,        title:  'Mangala Bhavana, Shikaripura'
               });
               var infowindow = new google.maps.InfoWindow({
                 content: contentString
